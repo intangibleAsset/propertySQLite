@@ -1,0 +1,27 @@
+Data model:
+
+item:
+propertyReference
+createdDate
+seizedDate
+seizedTime
+description
+
+locationRecovered*
+recoveredBy*
+images*
+owner*
+operation*
+
+--------------------------------------------
+
+owner:
+ownerFirstName
+ownerSurname
+ownerDateOfBirth
+ownerMobile
+ownerLandline
+ownerWorkPhone
+ownerEmail
+
+--------------------------------------------
