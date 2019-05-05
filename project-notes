@@ -6,6 +6,7 @@ createdDate
 seizedDate
 seizedTime
 description
+notes
 
 locationRecovered*
 recoveredBy*

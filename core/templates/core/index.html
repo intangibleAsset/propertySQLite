@@ -1,0 +1,58 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+<title>Property Home</title>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'core/index.css' %}">
+
+<form method='POST'>
+  {% csrf_token %}
+  <div class="form-row"><!-- outer row -->
+    <div id="col-left" class="form-group col-md-6 mb-0"><!-- first col left side -->
+      <div class="form-row"><!-- inner row left -->
+        <div class="form-group col-md-4 mb-0"><!-- top left col -->
+        </div>
+        <div class="form-group col-md-4 mb-0"><!-- top middle col -->
+          {{ form.propertyReference | as_crispy_field }}
+          {{ form.seizedDate | as_crispy_field }}
+          {{ form.seizedTime | as_crispy_field }}
+          {{ form.description | as_crispy_field }}
+          {{ form.notes | as_crispy_field }}
+        </div>
+        <div class="form-group col-md-4 mb-0"><!-- top right col -->
+        </div>
+      </div>
+    </div>
+
+    <div id="col-right" class="form-group col-md-6 mb-0"><!-- first col right side -->
+      <div class="form-row"><!-- inner row right -->
+        <div class="form-group col-md-4 mb-0"><!-- top left col -->
+          <p>description</p>
+        </div>
+        <div class="form-group col-md-4 mb-0"><!-- top middle col -->
+          <p>owner</p>
+        </div>
+        <div class="form-group col-md-4 mb-0"><!-- top right col -->
+          <p>something</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="form-row"><!-- save button row -->
+    <div class="form-group col-md-4 mb-0"><!-- left col -->
+    </div>
+    <div class="form-group col-md-4 mb-0"><!-- middle col -->
+      <input id='save_button' class='btn-block' type='submit' value="Save">
+    </div>
+    <div class="form-group col-md-4 mb-0"><!-- right col -->
+    </div>
+  </div>
+</form>
+
+{% endblock %}
